@@ -73,15 +73,6 @@ var invokedAsMain = require.main === module;
 
 // Start server if not invoked by require('./app')
 if (invokedAsMain) {
-  http.createServer(app).listen(app.get('port'), config.address, function() {
-    console.log("Express server listening on %s:%d in %s mode", config.address, config.port, app.settings.env);
-  });  
-} else {
-  // Export app if invoked by require('./app')
-  module.exports = app;
-}
-
-if (invokedAsMain) {
 	if (app.settings.env == "development") {
 		http.createServer(app).listen(app.get('port'), config.address, function() {
 		console.log("Express server listening on %s:%d in %s mode", config.address, config.port, app.settings.env);
