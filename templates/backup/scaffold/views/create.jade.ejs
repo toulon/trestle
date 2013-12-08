@@ -1,0 +1,16 @@
+extends <%=model.relativeRootPath%>/layout
+include <%=model.relativeRootPath%>/mixins/form-helpers
+
+block content
+
+  form#<%=model.singular%>-form.form-horizontal(action="<%=model.route%>/create", method="POST")
+    fieldset
+      legend Create a new <%=model.singularCapitalized%>
+
+      include form
+
+    .form-group
+      .col-md-offset-2.col-md-10
+        a.btn.btn-warning(href="<%=model.route%>") Back
+        | &nbsp;
+        button.btn.btn-primary(type="submit") Create

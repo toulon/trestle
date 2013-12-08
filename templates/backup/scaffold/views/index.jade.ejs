@@ -1,0 +1,27 @@
+extends <%=model.relativeRootPath%>/layout
+
+block content
+  h2.display-data All <%= model.pluralCapitalized %>
+    a.btn.btn-primary.pull-right(href="<%=model.route%>/create") Create a new <%= model.singularCapitalized %>
+
+  table.table.table-bordered.table-striped(style="width:100%")
+    tr
+<% for(var i in properties) { -%>
+        th <%=properties[i].nameCapitalized %>
+<% } -%>
+        th.last
+
+    each <%= model.singular %> in <%= model.plural %>
+      tr
+<% for(var i in properties) { -%>
+        td= display(<%=model.singular%>.<%=properties[i].name %>)
+<% } %>
+        td
+          a(href="<%=model.route%>/" + <%= model.singular %>._id + "/detail", title="Detail")
+            span.glyphicon.glyphicon-zoom-in
+          | 
+          a(href="<%=model.route%>/" + <%= model.singular %>._id + "/edit", title="Edit")
+            span.glyphicon.glyphicon-edit
+          | 
+          a(href="<%=model.route%>/" + <%= model.singular %>._id + "/delete", title="Delete")
+            span.glyphicon.glyphicon-remove

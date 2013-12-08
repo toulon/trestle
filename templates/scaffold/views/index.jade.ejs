@@ -1,0 +1,38 @@
+extends <%=model.relativeRootPath%>/layout
+
+block content
+	script(type='text/javascript')
+		$(document).ready(function() {
+			$("table.table.tablesorter.table-bordered").tablesorter({
+				sortList: [[0,0]],
+				theme: 'blue',
+				widgets: ["zebra"],
+				build_headers : {
+					rows    : 1,  // Number of header rows from the csv
+					classes : [], // Header classes to apply to cells
+					text    : [], // Header cell text
+					widths  : [ '15%', '30%', '15%', '40%' ] // set header cell widths
+				},
+				}
+			);
+		});
+	h2.display-data All <%= model.pluralCapitalized %>
+		a.btn.btn-primary.pull-right(href="<%=model.route%>/create") Create a new <%= model.singularCapitalized %>
+
+	table.table.tablesorter.table-bordered.table-striped(style="width:100%")
+		thead
+			tr
+<% for(var i in properties) { -%>
+				th <%=properties[i].nameCapitalized %>
+<% } -%>
+		tbody
+			each <%= model.singular %> in <%= model.plural %>
+				tr
+					td
+<% for(var i in properties) { -%>
+<% if (i == 0) { -%>
+						a(href="/<%=model.plural%>/" + <%=model.singular%>._id + "/detail", title="Detail")= display(<%=model.singular%>.<%=properties[i].name %>)
+<% } else { -%>
+						td= display(<%=model.singular%>.<%=properties[i].name %>)
+<% } %>
+<% } %>

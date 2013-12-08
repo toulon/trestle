@@ -1,0 +1,31 @@
+<% for(var i in properties) { -%>
++formGroup(<%=model.singular%>, '<%=properties[i].name%>')
+  +label("<%= properties[i].name %>", "<%= properties[i].nameCapitalized %>")
+<%    if(properties[i].type === 'String') { -%>
+  .col-md-6
+<%      if(properties[i].name === 'password') { -%>
+    +password("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%      } else { -%>
+    +text("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%      } -%>
+<%    } else if(properties[i].type === 'Textarea') { -%>
+  .col-md-6
+    +textarea("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%    } else if(properties[i].type === 'Number' || properties[i].type === 'int') { -%>
+  .col-md-4
+    +number("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%    } else if(properties[i].type === 'Boolean') { -%>
+  .col-md-2
+    +boolean("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%    } else if(properties[i].type === 'Date') { -%>
+  .col-md-4
+    +date("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%    } else if(properties[i].type === 'Datetime') { -%>
+  .col-md-4
+    +datetime("<%= properties[i].name %>", <%=model.singular%>.<%=properties[i].name%>)
+<%    } else { -%>
+  .col-md-6
+    | <%= properties[i].type %>
+<%    } -%>
+    +errorMessage(<%=model.singular%>, '<%=properties[i].name%>')
+<% } -%>

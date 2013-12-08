@@ -1,0 +1,21 @@
+extends <%=model.relativeRootPath%>/layout
+
+block content
+  h2.display-data <%= model.singularCapitalized %> Detail
+            
+  table.table.table-bordered
+    tr
+      th Property
+      th Value
+<% for(var i in properties) { -%>
+        tr
+          td <%=properties[i].nameCapitalized %>
+          td= display(<%=model.singular%>.<%=properties[i].name %>)
+<% } %>
+
+  .form-actions
+    a.btn.btn-warning(href="<%=model.route%>") Back
+    | &nbsp;
+    a.btn.btn-primary(href="<%=model.route%>/" + <%=model.singular%>._id + "/edit") Edit
+    | &nbsp;
+    a.btn.btn-danger(href="<%=model.route%>/" + <%=model.singular%>._id + "/delete") Delete
