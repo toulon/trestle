@@ -248,6 +248,9 @@ All generated view will be generated under views. After creating an app with Tre
 		used by all generated views and a mixin folder that defines mixins used in Trestle generated views.
 
 ## Trestle Change Log
+### 0.2.4
+* Fixed bugs in app.js.ejs
+
 ### 0.2.3
 
 * Added column sorting using tablesorter
