@@ -1,7 +1,7 @@
 {
   "name": "trestle",
   "description": "Opinionated project generator for node.js relying on express, jade, stylus, Bootstrap 3, and mongoose.",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "bin": "bin/cli.js",
   "repository": "git://github.com/toulon/trestle",
   "author": "Norman Coder <toulon4u@gmail.com>",
