@@ -1,8 +1,4 @@
-![Logo](https://raw.github.com/djensen47/trestle/master/assets/logo.png)
-
-Trestle is an opinionated scaffolding tool for node.js that originated from [trestle](https://github.com/saintedlama/trestle). Bumm is great but I wish to take Trestle in a different direction. There may have been a good reason to call the tool "trestle" but I never understood it. "Trestle" on the other hand is a construction term, similar to but not the same as scaffolding.
-
-> **trestle** /trəs/ *noun* a framework, typically consisting of rafters, posts, and struts, supporting a roof, bridge, or other structure
+Trestle is a scaffolding tool for node.js that originated from [trestle](https://github.com/saintedlama/trestle). In 6 commands you can have complete CRUD application, your mileage may vary of course, but see my wiki for details https://github.com/toulon/trestle/wiki
 
 Generated projects rely on [express](http://expressjs.com/) and [mongoose](http://mongoosejs.com/) without any persistence abstractions,
 additional libraries or frameworks. Just plain express and mongoose!
@@ -22,7 +18,7 @@ additional libraries or frameworks. Just plain express and mongoose!
 
 **Future**
 - Add pagination
--
+- Work on new logo
 
 # Installing Trestle
 
