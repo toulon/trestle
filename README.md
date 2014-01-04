@@ -5,6 +5,7 @@ additional libraries or frameworks. Just plain express and mongoose!
 
 # Roadmap
 **Done**
+- ~~Fixed problem with Updates to Jade and html standards~~
 - ~~Rename to Trestle~~
 - ~~Switch to Bootstrap 3.0~~
 - ~~Added ability to sort columns using tablesorter~~
