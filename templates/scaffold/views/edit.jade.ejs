@@ -2,15 +2,14 @@ extends <%=model.relativeRootPath%>/layout
 include <%=model.relativeRootPath%>/mixins/form-helpers
 
 block content
+  body
+    form#<%=model.singular%>-form.form-horizontal.col-md-offset-2.col-md-10(action="<%=model.route%>/" + <%=model.singular%>._id + "/edit", method="POST")
+      fieldset
+        legend Edit <%=model.singularCapitalized%>
 
-  form#<%=model.singular%>-form.form-horizontal(action="<%=model.route%>/" + <%=model.singular%>._id + "/edit", method="POST")
-    fieldset
-      legend Edit <%=model.singularCapitalized%>
+        != form
 
-      include form
-
-    .form-group
-      .col-md-offset-2.col-md-10
-        a.btn.btn-warning(href="<%=model.route%>") Back
-        | &nbsp;
-        button.btn.btn-primary(type="submit") Save
+      .form-group.col-md-offset-2.col-md-10
+          a.btn.btn-warning(href="<%=model.route%>") Back
+          | &nbsp;
+          button.btn.btn-primary(type="submit") Save

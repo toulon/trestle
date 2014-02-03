@@ -1,7 +1,6 @@
-Trestle is a scaffolding tool for node.js that originated from [trestle](https://github.com/saintedlama/trestle). In 6 commands you can have complete CRUD application, your mileage may vary of course, but see my wiki for details https://github.com/toulon/trestle/wiki
+Trestle is a scaffolding tool for node.js that originated from [bumm](https://github.com/saintedlama/bumm) and then [truss](https://github.com/djensen47/truss). In 6 commands you can have complete CRUD application, your mileage may vary of course, but see my wiki for details [trestle]( https://github.com/toulon/trestle/wiki)
 
-Generated projects rely on [express](http://expressjs.com/) and [mongoose](http://mongoosejs.com/) without any persistence abstractions,
-additional libraries or frameworks. Just plain express and mongoose!
+Generated projects rely on [express](http://expressjs.com/), [mongoose](http://mongoosejs.com/), [express](http://expressjs.com/), [jade](https://github.com/visionmedia/jade), [stylus](http://learnboost.github.io/stylus/), [boostrap](http://twbs.github.com/bootstrap), [forms-bootstrap](https://npmjs.org/package/forms-bootstrap), and [tablesorter](/https://github.com/Mottie/tablesorter)
 
 # Roadmap
 **Done**
@@ -245,6 +244,12 @@ All generated view will be generated under views. After creating an app with Tre
 		used by all generated views and a mixin folder that defines mixins used in Trestle generated views.
 
 ## Trestle Change Log
+### 0.3.0
+* Added forms-bootstrap and replaced portions of forms
+* Added date funtionality to forms-bootstrap
+* Cleaned up README.md
+
+
 ### 0.2.4
 * Fixed bugs in app.js.ejs
 

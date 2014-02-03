@@ -34,7 +34,7 @@ module.exports = [
   , '  later on.'
   , ''
 	, 'type:'
-	, '  number, date, buffer, boolean, objectid, array, datetime, date, textarea, string'
+	, '  number, buffer, boolean, objectid, array, datetime, date, textarea, string'
 	, ''
   , 'attrib:'
   , '  Attributes are used to describe properties of models used in routes, views'

@@ -1,0 +1,35 @@
+var <%=model.singularCapitalized%> = require('<%=model.relativeRootPath%>/models/<%=model.path%>'),
+  forms = require('forms-bootstrap/lib/forms');
+
+var fields = forms.fields,
+  validators = forms.validators,
+  widgets = forms.widgets;
+
+module.exports = function(app) {
+  var form = forms.create({
+<% for(var i in properties) { -%>
+<%=properties[i].name%>: fields.<%=properties[i].schemaType -%>({
+    "<%= properties[i].name %>": '<%= properties[i].nameCapitalized %>'
+  })
+<% } -%>
+  })
+
+
+
+
+
+module.exports = function(app) {
+var form = forms.create({
+label: fields.string({
+label: 'Label'
+}),
+action_date:fields.string({
+label: 'Action Date'
+}),
+action:fields.string({
+label: 'Action'
+}),
+location:fields.string({
+label: 'Location'
+})
+})

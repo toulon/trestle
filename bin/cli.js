@@ -1,12 +1,19 @@
 #!/usr/bin/env node
 
-var path = require('path'),
+var util = require('util'),
+  path = require('path'),
   optimist = require('optimist'),
   usage = require('./usage'),
   commands = require('../lib/commands'),
   properties = require('../lib/properties'),
   version = require('../package.json').version;
 
+/*
+If a command is unknown or incorrect parameters are entered the die
+  - Displays the passed error message
+  - Displays the usage message
+  - Terminates the program
+ */
 var die = function(msg) {
   console.error('\n', msg, '\n');
   console.info(usage);
@@ -37,7 +44,13 @@ var commandName = argv._.shift().toLowerCase();
 if (!commands[commandName]) {
   die('Command ' + commandName + ' is not known to trestle!');
 }
+/*
+ Parse options which will look something like
 
+ tim,IPAddress:String:required:true,model:Boolean,serialNbr:Number
+This module populates the options array and builds the directory
+structure using the trestle app <app name> command
+ */
 try {
   var options = properties.parse(argv._);
 
@@ -47,19 +60,33 @@ try {
     options.templateDir = process.env.TRESTLE_TEMPLATE_DIR;
   }
 
+
   if (argv.templateDir || argv.t) {
     options.templateDir = argv.templateDir || argv.t;
   }
 
   // copy switches from argv to options.switches
   options.switches = {};
+/*
+There will be two args in this case (_  and $0)
 
+i.e.
+ _ key = tim,IPAddress:String:required:true,model:Boolean,serialNbr:Number
+ $0 key = trestle
+ */
   for (var key in argv) {
     if (key != '_' && key != '$0' && argv.hasOwnProperty(key)) {
       options.switches[key] = argv[key];
     }
   }
+  //console.log("Options = " + util.inspect(options))
+  /*
+  commandName is the command that will be executed
+  (i.e.)
+  app, scaffold, resource, view, route, or model
 
+  Options are very important. The following is an example of
+   */
   commands[commandName](options);
 } catch (e) {
   die(e);
