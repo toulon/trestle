@@ -1,6 +1,6 @@
 var <%=model.singularCapitalized%> = require('<%=model.relativeRootPath%>/models/<%=model.path%>'),
     mapper = require('../lib/model-mapper'),
-    forms = require('forms-bootstrap/lib/forms');
+    forms = require('../public/vendor/forms-bootstrap/lib/forms');
 
 var fields = forms.fields,
   validators = forms.validators,

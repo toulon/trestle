@@ -1,0 +1,16 @@
+
+.container
+  .row
+    .span10
+      h1= title
+      p Displaying title #{title}
+  .row
+    .span10
+      p Displaying form
+      - if (typeof form !== 'undefined')
+        form(method='post').well.form-horizontal
+          != form
+          center
+            input(type='submit').btn.btn-large.btn-success
+      - else
+        p form is undefined

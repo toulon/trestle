@@ -79,13 +79,26 @@ i.e.
       options.switches[key] = argv[key];
     }
   }
-  //console.log("Options = " + util.inspect(options))
+  console.log("Options = " + util.inspect(options))
   /*
   commandName is the command that will be executed
   (i.e.)
   app, scaffold, resource, view, route, or model
 
   Options are very important. The following is an example of
+   Options = { model:
+   { singular: 'blogb',
+   singularCapitalized: 'Blogb',
+   plural: 'blogbs',
+   pluralCapitalized: 'Blogbs',
+   route: '/blogbs',
+   path: 'blogb',
+   relativePath: '',
+   relativeRootPath: '..' },
+   properties: [],
+   defaultProperty: undefined,
+   templateDir: '/usr/local/Cellar/node/0.8.14/lib/node_modules/trestle/templates',
+   switches: {} }
    */
   commands[commandName](options);
 } catch (e) {

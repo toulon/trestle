@@ -1,0 +1,15 @@
+Index: templates/app/public/vendor/forms-bootstrap/lib/fields.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/app/public/vendor/forms-bootstrap/lib/fields.js	(revision )
++++ templates/app/public/vendor/forms-bootstrap/lib/fields.js	(revision )
+@@ -1,6 +1,7 @@
+ /*jslint node: true */
+ 
+ var forms = require('./forms'),
++    util = require('util'),
+     async = require('async');
+ 
+ 
