@@ -245,13 +245,16 @@ All generated view will be generated under views. After creating an app with Tre
 
 ## Trestle Change Log
 
-### 0.3.6
-* Fixed bugs in forms-bootstrap
+### 0.3.9
+* Added datepicker
 
-### 0.3.5
+### 0.3.8
+* Form-bootstrap disappeared - fixed
+
+### 0.3.7
 * Fixed typos
 
-### 0.3.2
+### 0.3.3
 * Updated README.md
 
 ### 0.3.1

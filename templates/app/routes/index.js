@@ -1,6 +1,5 @@
 var path = require('path'),
   fs = require('fs');
-var util = require('util');
 
 var mainRoutes = [];
 
@@ -9,7 +8,6 @@ var requireRoutes = function(dir, app) {
     return path.join(__dirname, file) != __filename;
   });
 
-  console.log("Files = " + util.inspect(files))
   files.forEach(function(file) {
     var absolutePath = path.join(dir, file);
 

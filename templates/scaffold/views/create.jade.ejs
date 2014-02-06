@@ -2,14 +2,13 @@ extends <%=model.relativeRootPath%>/layout
 
 block content
   body
-    form#<%=model.singular%>-form.form-horizontal.col-md-10(action="<%=model.route%>/create", method="POST")
+    form#<%=model.singular%>-form.form-horizontal.col-md-offset-2.col-md-10(action="<%=model.route%>/create", method="POST")
       fieldset
         legend Create a new <%=model.singularCapitalized%>
 
         != form
 
-      .form-group
-        .col-md-offset-2.col-md-10
+      .form-group.col-md-offset-2.col-md-10
           a.btn.btn-warning(href="<%=model.route%>") Back
           | &nbsp;
           button.btn.btn-primary(type="submit") Create
