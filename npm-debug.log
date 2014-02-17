@@ -1,0 +1,405 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/toulon/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+12 verbose folder .
+13 info prepublish trestle@0.3.1-1.3
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/toulon/.npm/1f1177db-tar.lock
+16 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+17 verbose lock tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz /Users/toulon/.npm/4f8db898-00250-0-3409578569699079-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+21 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+22 verbose tar unpack /var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+23 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+24 verbose lock tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package /Users/toulon/.npm/06b2e6a9-00250-0-3409578569699079-package.lock
+25 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+26 verbose lock tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz /Users/toulon/.npm/4f8db898-00250-0-3409578569699079-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry LICENSE
+31 silly gunzTarPerm extractEntry lib/commands.js
+32 silly gunzTarPerm extractEntry lib/disect-modules.js
+33 silly gunzTarPerm extractEntry lib/properties.js
+34 silly gunzTarPerm extractEntry lib/types.js
+35 silly gunzTarPerm extractEntry lib/lib.iml
+36 silly gunzTarPerm extractEntry lib/prompt/app.js
+37 silly gunzTarPerm extractEntry lib/prompt/index.js
+38 silly gunzTarPerm extractEntry bin/cli.js
+39 silly gunzTarPerm extractEntry bin/usage.js
+40 silly gunzTarPerm extractEntry bin/bin.iml
+41 silly gunzTarPerm extractEntry .idea/encodings.xml
+42 silly gunzTarPerm extractEntry .idea/misc.xml
+43 silly gunzTarPerm extractEntry .idea/modules.xml
+44 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+45 silly gunzTarPerm extractEntry .idea/trestle.iml
+46 silly gunzTarPerm extractEntry .idea/vcs.xml
+47 silly gunzTarPerm extractEntry .idea/workspace.xml
+48 silly gunzTarPerm extractEntry test/config.js
+49 silly gunzTarPerm extractEntry test/disect-modules.js
+50 silly gunzTarPerm extractEntry test/properties.js
+51 silly gunzTarPerm extractEntry test/types.js
+52 silly gunzTarPerm extractEntry assets/logo.png
+53 silly gunzTarPerm extractEntry assets/trestle_logo.png
+54 silly gunzTarPerm extractEntry templates/app/README.md
+55 silly gunzTarPerm extractEntry templates/app/helpers.js
+56 silly gunzTarPerm extractEntry templates/app/config/defaults.js
+57 silly gunzTarPerm extractEntry templates/app/config/development.js
+58 silly gunzTarPerm extractEntry templates/app/config/index.js
+59 silly gunzTarPerm extractEntry templates/app/config/production.js
+60 silly gunzTarPerm extractEntry templates/app/lib/model-mapper.js
+61 silly gunzTarPerm extractEntry templates/app/public/css/custom.css
+62 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap-theme.css
+63 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap-theme.min.css
+64 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap.css
+65 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap.min.css
+66 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot
+67 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg
+68 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf
+69 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff
+70 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/js/bootstrap.js
+71 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/js/bootstrap.min.js
+72 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/css/datepicker.css
+73 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/js/bootstrap-datepicker.js
+74 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/less/datepicker.less
+75 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/package.json
+76 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/.npmignore
+77 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/README.md
+78 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/LICENSE
+79 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/index.js
+80 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test.js
+81 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/complex-express.js
+82 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/simple-express.js
+83 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/complex.jade
+84 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/mfntape.jade
+85 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/page.jade
+86 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/fields.js
+87 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/forms.js
+88 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/render.js
+89 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/validators.js
+90 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/widgets.js
+91 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-fields.js
+92 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-form.js
+93 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-forms.js
+94 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-render.js
+95 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-validators.js
+96 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-widgets.js
+97 silly gunzTarPerm extractEntry templates/app/public/vendor/jquery/js/jquery.min.js
+98 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/package.json
+99 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/README.md
+100 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.js
+101 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.min.js
+102 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/first.png
+103 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/last.png
+104 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/loading.gif
+105 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/next.png
+106 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/prev.png
+107 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.css
+108 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/css/theme.default.css
+109 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/js/jquery.tablesorter.min.js
+110 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/js/jquery.tablesorter.widgets.min.js
+111 silly gunzTarPerm extractEntry templates/app/routes/index.js
+112 silly gunzTarPerm extractEntry templates/app/views/index.jade
+113 silly gunzTarPerm extractEntry templates/app/views/layout.jade
+114 silly gunzTarPerm extractEntry templates/app/views/mixins/form-helpers.jade
+115 silly gunzTarPerm extractEntry templates/ejs/app.js.ejs
+116 silly gunzTarPerm extractEntry templates/forms/default.js.ejs
+117 silly gunzTarPerm extractEntry templates/scaffold/model/default.js.ejs
+118 silly gunzTarPerm extractEntry templates/scaffold/route/default.js.ejs
+119 silly gunzTarPerm extractEntry templates/scaffold/route/rest.js.ejs
+120 silly gunzTarPerm extractEntry templates/scaffold/views/create.jade.ejs
+121 silly gunzTarPerm extractEntry templates/scaffold/views/delete.jade.ejs
+122 silly gunzTarPerm extractEntry templates/scaffold/views/detail.jade.ejs
+123 silly gunzTarPerm extractEntry templates/scaffold/views/edit.jade.ejs
+124 silly gunzTarPerm extractEntry templates/scaffold/views/form.jade.ejs
+125 silly gunzTarPerm extractEntry templates/scaffold/views/index.jade.ejs
+126 silly gunzTarPerm extractEntry trestle.iml
+127 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+128 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+129 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+130 silly lockFile 4f8db898-00250-0-3409578569699079-tmp-tgz tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/tmp.tgz
+131 verbose tar pack [ '/Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz',
+131 verbose tar pack   '/var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package' ]
+132 verbose tarball /Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+133 verbose folder /var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+134 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+135 verbose lock tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package /Users/toulon/.npm/06b2e6a9-00250-0-3409578569699079-package.lock
+136 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+137 verbose lock tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz /Users/toulon/.npm/f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz.lock
+138 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+139 silly lockFile 06b2e6a9-00250-0-3409578569699079-package tar:///var/folders/8p/4mhn1mms4zqd0nkwh0484w100000gr/T/npm-96484-tNEP9Tak/1392615000250-0.3409578569699079/package
+140 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+141 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+142 silly lockFile 24b7452e-on-npm-trestle-0-3-1-1-3-package /Users/toulon/.npm/trestle/0.3.1-1.3/package
+143 verbose lock /Users/toulon/.npm/trestle/0.3.1-1.3/package /Users/toulon/.npm/24b7452e-on-npm-trestle-0-3-1-1-3-package.lock
+144 silly lockFile 24b7452e-on-npm-trestle-0-3-1-1-3-package /Users/toulon/.npm/trestle/0.3.1-1.3/package
+145 silly lockFile 24b7452e-on-npm-trestle-0-3-1-1-3-package /Users/toulon/.npm/trestle/0.3.1-1.3/package
+146 verbose tar unpack /Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+147 silly lockFile 1ba86513-on-npm-trestle-0-3-1-1-3-package tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package
+148 verbose lock tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package /Users/toulon/.npm/1ba86513-on-npm-trestle-0-3-1-1-3-package.lock
+149 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+150 verbose lock tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz /Users/toulon/.npm/f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz.lock
+151 silly gunzTarPerm modes [ '755', '644' ]
+152 silly gunzTarPerm extractEntry package.json
+153 silly gunzTarPerm extractEntry README.md
+154 silly gunzTarPerm extractEntry LICENSE
+155 silly gunzTarPerm extractEntry .idea/encodings.xml
+156 silly gunzTarPerm extractEntry .idea/misc.xml
+157 silly gunzTarPerm extractEntry .idea/modules.xml
+158 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+159 silly gunzTarPerm extractEntry .idea/trestle.iml
+160 silly gunzTarPerm extractEntry .idea/vcs.xml
+161 silly gunzTarPerm extractEntry .idea/workspace.xml
+162 silly gunzTarPerm extractEntry assets/logo.png
+163 silly gunzTarPerm extractEntry assets/trestle_logo.png
+164 silly gunzTarPerm extractEntry bin/cli.js
+165 silly gunzTarPerm extractEntry bin/usage.js
+166 silly gunzTarPerm extractEntry bin/bin.iml
+167 silly gunzTarPerm extractEntry lib/commands.js
+168 silly gunzTarPerm extractEntry lib/disect-modules.js
+169 silly gunzTarPerm extractEntry lib/properties.js
+170 silly gunzTarPerm extractEntry lib/types.js
+171 silly gunzTarPerm extractEntry lib/lib.iml
+172 silly gunzTarPerm extractEntry lib/prompt/app.js
+173 silly gunzTarPerm extractEntry lib/prompt/index.js
+174 silly gunzTarPerm extractEntry templates/app/README.md
+175 silly gunzTarPerm extractEntry templates/app/helpers.js
+176 silly gunzTarPerm extractEntry templates/app/config/defaults.js
+177 silly gunzTarPerm extractEntry templates/app/config/development.js
+178 silly gunzTarPerm extractEntry templates/app/config/index.js
+179 silly gunzTarPerm extractEntry templates/app/config/production.js
+180 silly gunzTarPerm extractEntry templates/app/lib/model-mapper.js
+181 silly gunzTarPerm extractEntry templates/app/public/css/custom.css
+182 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap-theme.css
+183 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap-theme.min.css
+184 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap.css
+185 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/css/bootstrap.min.css
+186 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot
+187 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg
+188 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf
+189 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff
+190 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/js/bootstrap.js
+191 silly gunzTarPerm extractEntry templates/app/public/vendor/bootstrap/js/bootstrap.min.js
+192 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/css/datepicker.css
+193 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/js/bootstrap-datepicker.js
+194 silly gunzTarPerm extractEntry templates/app/public/vendor/datepicker/less/datepicker.less
+195 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/package.json
+196 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/.npmignore
+197 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/README.md
+198 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/LICENSE
+199 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/index.js
+200 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test.js
+201 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/complex-express.js
+202 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/simple-express.js
+203 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/complex.jade
+204 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/mfntape.jade
+205 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/example/page.jade
+206 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/fields.js
+207 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/forms.js
+208 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/render.js
+209 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/validators.js
+210 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/lib/widgets.js
+211 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-fields.js
+212 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-form.js
+213 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-forms.js
+214 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-render.js
+215 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-validators.js
+216 silly gunzTarPerm extractEntry templates/app/public/vendor/forms-bootstrap/test/test-widgets.js
+217 silly gunzTarPerm extractEntry templates/app/public/vendor/jquery/js/jquery.min.js
+218 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/package.json
+219 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/README.md
+220 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.js
+221 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.min.js
+222 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/first.png
+223 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/last.png
+224 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/loading.gif
+225 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/next.png
+226 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/icons/prev.png
+227 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/addons/pager/jquery.tablesorter.pager.css
+228 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/css/theme.default.css
+229 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/js/jquery.tablesorter.min.js
+230 silly gunzTarPerm extractEntry templates/app/public/vendor/tablesorter/js/jquery.tablesorter.widgets.min.js
+231 silly gunzTarPerm extractEntry templates/app/routes/index.js
+232 silly gunzTarPerm extractEntry templates/app/views/index.jade
+233 silly gunzTarPerm extractEntry templates/app/views/layout.jade
+234 silly gunzTarPerm extractEntry templates/app/views/mixins/form-helpers.jade
+235 silly gunzTarPerm extractEntry templates/ejs/app.js.ejs
+236 silly gunzTarPerm extractEntry templates/forms/default.js.ejs
+237 silly gunzTarPerm extractEntry templates/scaffold/model/default.js.ejs
+238 silly gunzTarPerm extractEntry templates/scaffold/route/default.js.ejs
+239 silly gunzTarPerm extractEntry templates/scaffold/route/rest.js.ejs
+240 silly gunzTarPerm extractEntry templates/scaffold/views/create.jade.ejs
+241 silly gunzTarPerm extractEntry templates/scaffold/views/delete.jade.ejs
+242 silly gunzTarPerm extractEntry templates/scaffold/views/detail.jade.ejs
+243 silly gunzTarPerm extractEntry templates/scaffold/views/edit.jade.ejs
+244 silly gunzTarPerm extractEntry templates/scaffold/views/form.jade.ejs
+245 silly gunzTarPerm extractEntry templates/scaffold/views/index.jade.ejs
+246 silly gunzTarPerm extractEntry test/config.js
+247 silly gunzTarPerm extractEntry test/disect-modules.js
+248 silly gunzTarPerm extractEntry test/properties.js
+249 silly gunzTarPerm extractEntry test/types.js
+250 silly gunzTarPerm extractEntry trestle.iml
+251 silly lockFile 1ba86513-on-npm-trestle-0-3-1-1-3-package tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package
+252 silly lockFile 1ba86513-on-npm-trestle-0-3-1-1-3-package tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package
+253 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+254 silly lockFile f0ee63fa-pm-trestle-0-3-1-1-3-package-tgz tar:///Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz
+255 verbose chmod /Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz 644
+256 verbose chown /Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz [ 504, 20 ]
+257 silly lockFile 3a52ce78- .
+258 silly lockFile 3a52ce78- .
+259 silly publish { name: 'trestle',
+259 silly publish   description: 'Project generator for node.js relying on express, jade, stylus, Bootstrap 3, Tablesorter, and mongoose.',
+259 silly publish   version: '0.3.1-1.3',
+259 silly publish   bin: { trestle: 'bin/cli.js' },
+259 silly publish   repository: { type: 'git', url: 'git://github.com/toulon/trestle' },
+259 silly publish   author: { name: 'Norman Coder', email: 'toulon4u@gmail.com' },
+259 silly publish   contributors: [ { name: 'Dave Jensen', email: 'david@jensen47.com' } ],
+259 silly publish   license: 'BSD',
+259 silly publish   keywords:
+259 silly publish    [ 'web',
+259 silly publish      'project generator',
+259 silly publish      'scaffold',
+259 silly publish      'express',
+259 silly publish      'tablesorter',
+259 silly publish      'jade',
+259 silly publish      'forms-bootstrap' ],
+259 silly publish   dependencies:
+259 silly publish    { ejs: '0.8.x',
+259 silly publish      optimist: '0.6.x',
+259 silly publish      wrench: '1.5.x',
+259 silly publish      fleck: '0.5.x',
+259 silly publish      prompt: '0.2.x' },
+259 silly publish   devDependencies: { mocha: '1.10.x', should: '1.2.x' },
+259 silly publish   scripts: { test: 'mocha' },
+259 silly publish   bugs: { url: 'https://github.com/toulon/trestle/issues' },
+259 silly publish   homepage: 'https://github.com/toulon/trestle',
+259 silly publish   readme: '![Logo](https://raw.github.com/toulon/trestle/master/assets/logo.png)Trestle is a scaffolding tool for node.js that originated from [bumm](https://github.com/saintedlama/bumm) and then [truss](https://github.com/djensen47/truss). In 6 commands you can have complete CRUD application, your mileage may vary of course, but see my wiki for details [trestle]( https://github.com/toulon/trestle/wiki);Generated projects rely on [express](http://expressjs.com/), [mongoose](http://mongoosejs.com/), [express](http://expressjs.com/), [jade](https://github.com/visionmedia/jade), [stylus](http://learnboost.github.io/stylus/), [boostrap](http://twbs.github.com/bootstrap), [forms-bootstrap](https://npmjs.org/package/forms-bootstrap), and [tablesorter](/https://github.com/Mottie/tablesorter)',
+259 silly publish   readmeFilename: 'README.md',
+259 silly publish   _id: 'trestle@0.3.1-1.3',
+259 silly publish   _from: '.',
+259 silly publish   dist: { shasum: 'e862a14993e6d2175f2746991a0ae768c9bbf350' },
+259 silly publish   _resolved: 'https://registry.npmjs.org/trestle/-/trestle-0.3.9.tgz' }
+260 verbose url raw trestle
+261 verbose url resolving [ 'https://registry.npmjs.org/', './trestle' ]
+262 verbose url resolved https://registry.npmjs.org/trestle
+263 info trying registry request attempt 1 at 21:30:02
+264 http PUT https://registry.npmjs.org/trestle
+265 http 409 https://registry.npmjs.org/trestle
+266 verbose url raw trestle
+267 verbose url resolving [ 'https://registry.npmjs.org/', './trestle' ]
+268 verbose url resolved https://registry.npmjs.org/trestle
+269 info trying registry request attempt 1 at 21:30:03
+270 http GET https://registry.npmjs.org/trestle
+271 http 200 https://registry.npmjs.org/trestle
+272 verbose uploading [ 'trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7',
+272 verbose uploading   '/Users/toulon/.npm/trestle/0.3.1-1.3/package.tgz' ]
+273 verbose url raw trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+274 verbose url resolving [ 'https://registry.npmjs.org/',
+274 verbose url resolving   './trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7' ]
+275 verbose url resolved https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+276 info trying registry request attempt 1 at 21:30:04
+277 http PUT https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+278 http 502 https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+279 verbose bad json <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+279 verbose bad json <html><head>
+279 verbose bad json <title>502 Bad Gateway</title>
+279 verbose bad json </head><body>
+279 verbose bad json <h1>Bad Gateway</h1>
+279 verbose bad json <p>The proxy server received an invalid
+279 verbose bad json response from an upstream server.<br />
+279 verbose bad json </p>
+279 verbose bad json <p>Additionally, a 400 Bad Request
+279 verbose bad json error was encountered while trying to use an ErrorDocument to handle the request.</p>
+279 verbose bad json </body></html>
+280 error registry error parsing json
+281 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+281 info retry <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+281 info retry <html><head>
+281 info retry <title>502 Bad Gateway</title>
+281 info retry </head><body>
+281 info retry <h1>Bad Gateway</h1>
+281 info retry <p>The proxy server received an invalid
+281 info retry response from an upstream server.<br />
+281 info retry </p>
+281 info retry <p>Additionally, a 400 Bad Request
+281 info retry error was encountered while trying to use an ErrorDocument to handle the request.</p>
+281 info retry </body></html>
+282 info trying registry request attempt 2 at 21:30:15
+283 http PUT https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+284 http 400 https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+285 verbose bad json <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+285 verbose bad json <html><head>
+285 verbose bad json <title>400 Bad Request</title>
+285 verbose bad json </head><body>
+285 verbose bad json <h1>Bad Request</h1>
+285 verbose bad json <p>Your browser sent a request that this server could not understand.<br />
+285 verbose bad json </p>
+285 verbose bad json </body></html>
+286 error registry error parsing json
+287 info trying registry request attempt 1 at 21:31:17
+288 http PUT https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+289 http 400 https://registry.npmjs.org/trestle/-/trestle-0.3.1-1.3.tgz/-rev/51-10d6a6e07ef60d1cbea1dcf1378c12c7
+290 verbose bad json <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+290 verbose bad json <html><head>
+290 verbose bad json <title>400 Bad Request</title>
+290 verbose bad json </head><body>
+290 verbose bad json <h1>Bad Request</h1>
+290 verbose bad json <p>Your browser sent a request that this server could not understand.<br />
+290 verbose bad json </p>
+290 verbose bad json </body></html>
+291 error registry error parsing json
+292 error publish Error uploading package
+293 error SyntaxError: Unexpected token <
+293 error <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+293 error <html><head>
+293 error <title>400 Bad Request</title>
+293 error </head><body>
+293 error <h1>Bad Request</h1>
+293 error <p>Your browser sent a request that this server could not understand.<br />
+293 error </p>
+293 error </body></html>
+293 error
+293 error     at Object.parse (native)
+293 error     at RegClient.<anonymous> (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:238:23)
+293 error     at Request.self.callback (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/node_modules/request/request.js:129:22)
+293 error     at Request.EventEmitter.emit (events.js:98:17)
+293 error     at Request.<anonymous> (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/node_modules/request/request.js:873:14)
+293 error     at Request.EventEmitter.emit (events.js:117:20)
+293 error     at IncomingMessage.<anonymous> (/usr/local/Cellar/node/0.8.14/lib/node_modules/npm/node_modules/request/request.js:824:12)
+293 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+293 error     at _stream_readable.js:920:16
+293 error     at process._tickCallback (node.js:415:13)
+294 error If you need help, you may report this log at:
+294 error     <http://github.com/isaacs/npm/issues>
+294 error or email it to:
+294 error     <npm-@googlegroups.com>
+295 error System Darwin 13.0.0
+296 error command "node" "/usr/local/bin/npm" "publish"
+297 error cwd /Users/toulon/github/trestle
+298 error node -v v0.10.22
+299 error npm -v 1.3.14
+300 error type unexpected_token
+301 verbose exit [ 1, true ]

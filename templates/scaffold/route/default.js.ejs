@@ -9,13 +9,13 @@ var fields = forms.fields,
 
 module.exports = function(app) {
 var form = forms.create({
-<% for(var i in properties) { -%>
-<%=properties[i].name%>: fields.<%=properties[i].schemaType.toLowerCase() -%> ({
-    label: '<%= properties[i].nameCapitalized %>'
-}),
-<% } -%>
+  <% for(var i in properties) { -%>
+      <%=properties[i].name%>: fields.<%=properties[i].schemaType.toLowerCase() -%> ({
+      label: '<%= properties[i].nameCapitalized %>'
+    }),
+  <% } -%>
 })
-
+  var page_title = "All <%= model.pluralCapitalized %>"
   app.param('<%=model.singular%>Id', function(req, res, next, id) {
     <%=model.singularCapitalized%>.findById(id, function(err, <%=model.singular%>) {
       if (err) {
