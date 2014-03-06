@@ -246,8 +246,10 @@ All generated view will be generated under views. After creating an app with Tre
 		used by all generated views and a mixin folder that defines mixins used in Trestle generated views.
 
 ## Trestle Change Log
-## 0.3.11.3
+## 0.3.12
+* Replaced forms-bootstrap with forms
 
+## 0.3.11.3
 * Modified views
 
 ### 0.3.9

@@ -1,14 +1,14 @@
 var <%=model.singularCapitalized%> = require('<%=model.relativeRootPath%>/models/<%=model.path%>'),
     mapper = require('../lib/model-mapper'),
     async = require('async'),
-    forms = require('../public/vendor/forms-bootstrap/lib/forms');
+    forms = require('../public/vendor/forms/lib/forms');
 
 var fields = forms.fields,
   validators = forms.validators,
   widgets = forms.widgets;
 
 module.exports = function(app) {
-var form = forms.create({
+var reg_form = forms.create({
   <% for(var i in properties) { -%>
       <%=properties[i].name%>: fields.<%=properties[i].schemaType.toLowerCase() -%> ({
       label: '<%= properties[i].nameCapitalized %>'
@@ -34,69 +34,126 @@ var form = forms.create({
   });
 
   app.get('<%=model.route%>/create', function(req, res) {
-      res.render('<%=model.path%>/create', {
-      <%=model.singular%> : new <%=model.singularCapitalized%>(),
-      title : '<%=model.pluralCapitalized%>',
-      form: form.toHTML()
+    reg_form.handle(req, {
+      success: function (form) {
+        console.log("Get - Success")
+      },
+      other: function (form) {
+        console.log("Get - Other")
+      },
+      empty: function (form) {
+        console.log("There was no form data in the request")
+        res.render('<%=model.path%>/create', {
+          title : '<%=model.pluralCapitalized%>',
+          form: form.toHTML()
+        });
+      }
     });
   });
 
   app.post('<%=model.route%>/create', function(req, res) {
-    form.handle(req, {
+    reg_form.handle(req, {
       success: function (form) {
-        var <%=model.singular%> = new <%=model.singularCapitalized%>(req.body);
+        console.log("Post - Success")
+        var <%=model.singular%> = <%=model.singularCapitalized%>(form.data);
         <%=model.singular%>.save(function(err) {
-        if (err) {
-          res.render('<%=model.path%>/create', {
-            title: '<%=model.pluralCapitalized%>',
-            form: form.toHTML()
-          });
-        } else {
-          res.redirect('<%=model.route%>');
-        }
-      });
-        },
-        other: function (form) {
-          res.render('/<%=model.path%>', {
-            title: 'Failed!',
-            form: form.toHTML()
-          });
-        }
+          if (err) {
+            console.error(err);
+            res.render('<%=model.path%>/create')
+          } else {
+            res.redirect('<%=model.route%>');
+          }
+        });
+      },
+      other: function (form) {
+        console.log("Post - Other")
+        var <%=model.singular%> = <%=model.singularCapitalized%>(form.data);
+        <%=model.singular%>.save(function(err) {
+          if (err) {
+            console.error(err);
+            res.render('<%=model.path%>/create')
+          } else {
+            res.redirect('<%=model.route%>');
+          }
+        });
+      },
+      empty: function (form) {
+        console.log("Post - There was no form data in the request")
+        res.redirect('/<%=model.plural%>');
+      }
     });
   });
 
   app.get('<%=model.route%>/:<%=model.singular%>Id/edit', function(req, res) {
-    form.bind(res.locals.<%=model.path%>);
-    res.render('<%=model.path%>/edit', {
-      title : '<%=model.pluralCapitalized%>',
-      form: form.toHTML()
+    mapper.map(req.body).to(res.locals.<%=model.path%>);
+    reg_form.handle(res.locals.<%=model.path%>, {
+      success: function (form) {
+        console.log("Get - Edit - Success")
+        res.render('<%=model.path%>/edit', {
+          title : '<%=model.pluralCapitalized%>',
+          form: form.toHTML()
+        });
+      },
+      other: function (form) {
+        console.log("Get - Edit - Other")
+        res.render('<%=model.path%>/edit', {
+          title : '<%=model.pluralCapitalized%>',
+          form: form.toHTML()
+        })
+      },
+      empty: function (form) {
+        console.log("Get - Edit - Empty")
+      }
     });
   });
 
   app.post('<%=model.route%>/:<%=model.singular%>Id/edit', function(req, res) {
-    mapper.map(req.body).to(res.locals.<%=model.path%>);
-    form.handle(res.locals.<%=model.path%>, {
+    reg_form.handle(req, {
       success: function (form) {
-        console.log("Success")
+        console.log("Post - Edit - Success")
+        mapper.map(req.body).to(res.locals.<%=model.path%>);
+        res.locals.<%=model.singular%>.save(function(err) {
+          if (err) {
+            console.error(err);
+            res.render('<%=model.path%>/edit');
+          } else {
+            res.redirect('<%=model.route%>');
+          }
+        });
       },
       other: function (form) {
-        console.log("Failure")
-      }
-    });
-    res.locals.<%=model.singular%>.save(function(err) {
-      if (err) {
-        res.render('<%=model.path%>/edit', {
-          title: '<%=model.pluralCapitalized%>',
-          form: form.toHTML()
+        console.log("Post - Edit - Other")
+        mapper.map(req.body).to(res.locals.<%=model.path%>);
+        res.locals.<%=model.path%>.save( function(err) {
+          if (err) {
+            console.error(err);
+              res.render('<%=model.path%>/edit');
+          } else {
+          res.redirect('<%=model.route%>');
+          }
         });
-      } else {
-        res.redirect('<%=model.route%>');
+      },
+      empty: function (form) {
+        console.log("Post - Edit - There was no form data in the request")
+        res.redirect('/<%=model.route%>');
       }
     });
   });
 
-  app.get('<%=model.route%>/:<%=model.singular%>Id/detail', function(req, res) {
-    res.render('<%=model.path%>/detail');
+  app.get('/<%=model.plural%>/:<%=model.singular%>Id/detail', function(req, res) {
+    reg_form.handle(req, {
+      success: function (form) {
+        console.log("detail get - Success")
+      },
+      other: function (form) {
+        console.log("detail get - Other")
+      },
+      empty: function (form) {
+        console.log("Detail get - There was no form data in the request")
+        form.bind(res)
+        res.render('<%=model.path%>/detail');
+      }
+    });
   });
 
   app.get('<%=model.route%>/:<%=model.singular%>Id/delete', function(req, res) {
