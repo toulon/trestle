@@ -1,4 +1,4 @@
-![Logo](https://raw.github.com/djensen47/truss/master/assets/logo.png)
+![Logo](https://raw.github.com/toulon/trestle/assets/trestle_logo.png)
 
 Trestle is a scaffolding tool for node.js that originated from [bumm](https://github.com/saintedlama/bumm) and then [truss](https://github.com/djensen47/truss). In 6 commands you can have complete CRUD application, your mileage may vary of course, but see my wiki for details [trestle]( https://github.com/toulon/trestle/wiki)
 
